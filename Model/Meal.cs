@@ -12,9 +12,11 @@ namespace Menu.Model
         public string Name { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
+        public decimal Price { get; set; }
         public DateTime Date { get; set; }
-        public DayOfWeek Day { get => Date.DayOfWeek; }
-            
-        public Image Image { get; set; }
+        public string Day { get => Date.ToString("dddd"); }
+        public int DayNo { get => (int)Date.DayOfWeek; }
+
+        public string Image { get; set; }
     }
 }

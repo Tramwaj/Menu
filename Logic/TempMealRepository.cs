@@ -26,7 +26,7 @@ namespace Menu.Logic
 
         public ICollection<Meal> GetThisWeekMeals()
         {
-            return _meals.Where(m => m.Date > _currentWeekStart && m.Date < _currentWeekStart).ToList();
+            return _meals.Where(m => m.Date > _currentWeekStart && m.Date < _currentWeekStart.AddDays(7)).ToList();
         }
         public ICollection<Meal> GetNextWeekMeals()
         {
